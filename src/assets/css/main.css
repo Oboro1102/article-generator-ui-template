@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+@import '@/assets/css/_keyframes.css';
+@import '@/assets/css/_vueTransition.css';
+
+@theme {
+  --font-sans:
+    'Noto Sans TC', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  --color-siteBg: #edf0f2;
+  --color-black: #232323;
+  --color-main: #0055ff;
+  --color-sub: #f5ce40;
+  --color-note: #849ec0;
+  --color-noteLight: #96a2bc;
+  --color-divide: #e3eaf0;
+  --color-secondary: #4b5a7d;
+  --color-secondaryLight: #8e9ab4;
+  --color-error: #e53935;
+  --color-placeholder: #7f97b3;
+  --color-tertiary: #4b5a7d;
+  --color-keywordCombine: #00b8b3;
+  --color-info: #009cf9;
+  --radius-site: 0.375rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  @apply rounded-site;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+html,
+body {
+  @apply bg-siteBg h-full min-h-dvh text-black;
+}
+
+button {
+  @apply cursor-pointer disabled:cursor-not-allowed;
+}
+
+.loading:after {
+  @apply block size-5 rounded-full border-[3px] border-transparent border-y-white;
+  content: ' ';
+  animation: spin 1.5s linear infinite;
+}
+
+.loading--sm:after {
+  @apply size-8 rounded-full border-2;
+}
+
+.loginLayoutBackground {
+  background-image: url('@/assets/images/Gemini_Generated_Image_y3lz1hy3lz1hy3lz.png');
+}
+
+.animate {
+  @apply transition-all duration-200;
+}
+
+.radius {
+  @apply rounded-site;
+}
+
+.wrap {
+  @apply p-4;
+}
+.wrap--gap {
+  @apply gap-4;
+}
+
+.panel {
+  @apply rounded-site flex w-fit bg-white p-1;
+}
+
+.form__label {
+  @apply text-sm;
+}
+.form__label--whitMessage {
+  @apply inline-flex items-baseline gap-1;
+}
